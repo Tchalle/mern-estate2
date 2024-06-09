@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGO)
+  .connect(process.env.MONGODBCloud || "mongodb://127.0.0.1:27017/mern-state")
   .then(() => {
     console.log("Connect to MongoDB!");
   })
